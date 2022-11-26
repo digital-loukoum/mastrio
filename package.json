@@ -1,0 +1,30 @@
+{
+	"name": "@digitak/mastrio",
+	"version": "0.1.0",
+	"description": "The maestro of ast generators. Fast and concise grammar syntax with built-in syntax error handling.",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"build": "",
+		"main": "nim r --backend:c --verbosity:0 source/mastrio.nim",
+		"main:js": "nim r --backend:js --verbosity:0 source/mastrio.nim",
+		"dev": "bun run main && chokidar 'source/**/*.nim' -c 'bun run main'",
+		"dev:js": "bun run main:js && chokidar 'source/**/*.nim' -c 'bun run main:js'",
+		"compile": "nim compileToC --compileOnly:on source/mastrio.nim"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/digital-loukoum/mastrio"
+	},
+	"author": "Gin Quin",
+	"license": "GNU",
+	"bugs": {
+		"url": "https://github.com/digital-loukoum/mastrio/issues"
+	},
+	"homepage": "https://github.com/digital-loukoum/mastrio#readme",
+	"devDependencies": {
+		"chokidar-cli": "^3.0.0"
+	},
+	"dependencies": {
+	}
+}
